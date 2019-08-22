@@ -39,3 +39,9 @@ p= l= k = " Hello World"
 print(p)
 print(l)
 print(k)
+
+
+first_name = "mohammed"
+last_name = "Al Asmri"
+
+print("My Name :" + first_name + " "+last_name )
