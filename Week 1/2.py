@@ -1,5 +1,5 @@
 v= 6
-c = 5   #  اصغر من
+c = 5   
 if v < c:
 
 	print(" c big than v")
