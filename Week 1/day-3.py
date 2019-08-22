@@ -21,3 +21,21 @@ print(a)
 print(s)
 print(z)
 print(c)
+
+"""
+تعريف اكثر من متغير بسطر واحد
+"""
+
+e, r, t = "orange", "yellow","green"
+print(e)
+print(r)
+print(t)
+
+
+"""
+تعريف عدة متغيرات لقيمة واحدة
+"""
+p= l= k = " Hello World"
+print(p)
+print(l)
+print(k)
