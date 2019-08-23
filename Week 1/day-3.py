@@ -63,3 +63,4 @@ print("My Name :" + first_name + " " + last_name)
 
 print("--------")
 
+input('Press ENTER to continue...')
