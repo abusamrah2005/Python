@@ -30,6 +30,20 @@ print("--------------------")
 print("التحويل من رقم صحيح الى رقم مركب")
 print(z)
 
+print("--------------------")
+
+"""
+العدد العشوائي
+
+"""
+import random
+
+print(random.randrange (1,10))
+
+
+
+
+
 
 input('Press ENTER to continue...')
 
