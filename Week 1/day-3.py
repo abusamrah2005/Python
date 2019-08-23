@@ -2,6 +2,9 @@
 التعامل مع النصوص والارقام
 """
 
+print(" Week 1 - Day-3 ") 
+print("--------------------")
+
 # x and y  is string
 x = "Mohammed"
 y = "Asmri"
@@ -10,7 +13,7 @@ c = x + " " + y
 
 print(c)
 
-print("--------")
+print("--------------------")
 
 # d and n  is int
 d = 6
@@ -33,8 +36,8 @@ print(no_1 - no_2)
 
 
 
-print("--------")
-print("--------")
+print("--------------------")
+
 """
 تعريف اكثر من متغير بسطر واحد
 """
@@ -43,7 +46,7 @@ e, r, t = "orange", "yellow", "green"
 print(e)
 print(r)
 print(t)
-print("--------")
+print("--------------------")
 
 
 """
@@ -54,13 +57,15 @@ print(p)
 print(l)
 print(k)
 
-print("--------")
+print("--------------------")
+
+
 
 first_name = "mohammed"
 last_name = "Al Asmri"
 
 print("My Name :" + first_name + " " + last_name)
 
-print("--------")
+print("--------------------")
 
 input('Press ENTER to continue...')
