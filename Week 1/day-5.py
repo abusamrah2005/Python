@@ -11,3 +11,6 @@ basket ="\n1 - "+ x +"\n2 - " + y +"\n3 - "+ z
 
 print ("In My Basket : "+"\n" +basket)
 print("--------------------")
+
+
+input('Press ENTER to continue...')
