@@ -16,18 +16,33 @@ print("-------------------------------")
 # Python Assignment Operators
 
 print(" Python Assignment Operators - عوامل إعطاء قيم للمتغيرات/ التخصيص")
+
+meth = """ The Operators
+ b = 6,
+ b += 2"""
+print(meth)
 b = 6
 b += 2
-print("b = 6 and b += 2 ")
+
 print ("  result = ", b)
 print("-------------------------------")
+
+meth = """ The Operators
+ b = 6,
+ b *= 2"""
+print(meth)
 b = 6
 b *= 2
-print("b = 6 and b *= 2 ")
+
 print ("  result = ", b)
 
 print("-------------------------------")
+
+meth = """ The Operators
+ b = 6,
+ b -= 2"""
+print(meth)
 b = 6
 b -= 2
-print("b = 6 and b -= 2 ")
+
 print ("  result = ", b)
