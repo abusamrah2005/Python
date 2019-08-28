@@ -36,4 +36,4 @@ My_Order = " I want {1} pieces of Item {0} for price {2} dollars "
 
 print(My_Order.format(qount, item, price))
 
-print("-------------------------------")
+print("------------------------------- ")
