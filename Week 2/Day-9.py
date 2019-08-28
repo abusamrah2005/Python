@@ -20,7 +20,7 @@ print("My_Order = I want {} pieces of Item {} for price {} dollars .")
 qount = 200
 item = "CD"
 price = 2
-My_Order = " I want {} pieces of Item {} for price {} dollars ."
+My_Order = " I want {} pieces of Item {} for price {} dollars . "
 
 print(My_Order.format(qount, item, price))
 
