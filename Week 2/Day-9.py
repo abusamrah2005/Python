@@ -24,7 +24,7 @@ My_Order = " I want {} pieces of Item {} for price {} dollars ."
 
 print(My_Order.format(qount, item, price))
 
-print("-------------------------------")
+print("--------------------------------")
 
 # You can use index numbers {0} to be sure the arguments are placed in the correct placeholders
 
