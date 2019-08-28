@@ -16,7 +16,7 @@ print(text.format(Age))
 print("-------------------------------")
 
 print("format() method")
-print("My_Order = I want {} pieces of Item {} for price {} dollars .")
+print("My_Order = I want {} pieces of Item {} for price {} dollars . ")
 qount = 200
 item = "CD"
 price = 2
