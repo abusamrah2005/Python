@@ -28,7 +28,7 @@ print ("  result = ", b)
 print("-------------------------------")
 
 meth = """ The Operators
- b = 6,
+ b = 6
  b *= 2"""
 print(meth)
 b = 6
@@ -39,7 +39,7 @@ print ("  result = ", b)
 print("-------------------------------")
 
 meth = """ The Operators
- b = 6,
+ b = 6
  b -= 2"""
 print(meth)
 b = 6
