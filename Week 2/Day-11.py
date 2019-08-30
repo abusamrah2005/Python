@@ -2,7 +2,9 @@
 
 """  عوامل الشروط المنطقية
  
-  Python Logical Operators"""
+  Python Logical Operators
+
+  """
 
 
 My_Number = 8
