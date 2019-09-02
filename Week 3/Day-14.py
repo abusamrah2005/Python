@@ -28,8 +28,9 @@ Devices = ["Apple", "Samsung", "Huawei", "Nokia"]
 print("\nقائمه بالاجهزة الموجدودة في القائمه\n "+"Apple", "Samsung", "Huawei", "Nokia" )
 userinput = input("Enter Device name ادخل اسم الجهاز : ") # هنا نطلب من المستخدم نوع الجهاز المرتد البحث عنه في القائمه
 
-if userinput in Devices:
+if  userinput in Devices:
     print("Yes, The Device {} is In Devices List. ".format(userinput))
+    
 else:
     print("no, The Device {} is not in Devices List.".format(userinput))
 
