@@ -1,5 +1,4 @@
 """
-
 القوائم في لغة البايثون
 Python Lists 2
 """
@@ -19,19 +18,15 @@ print(Devices[0:3]) # print from index 0 to index 3
 print(Devices[2:]) # print from index 2 to End
 print(Devices[3]) # print index 3 Only
 
-
 print("-------------------------------------")
-
 
 # التحقق من وجود عنصر في القائمة مع السماح للمستخدم بإدخال القيمه
 # Checks for an item in the list and allows the user to enter the value
 # To determine if a specified item is present in a list use the in keyword.
 
-
-
 Devices = ["Apple", "Samsung", "Huawei", "Nokia"]
-
-userinput = input("Please Enter Device name : ")
+print("\nقائمه بالاجهزة الموجدودة في القائمه\n "+"Apple", "Samsung", "Huawei", "Nokia" )
+userinput = input("Enter Device name ادخل اسم الجهاز : ") # هنا نطلب من المستخدم نوع الجهاز المرتد البحث عنه في القائمه
 
 if userinput in Devices:
     print("Yes, The Device {} is In Devices List. ".format(userinput))
@@ -39,7 +34,6 @@ else:
     print("no, The Device {} is not in Devices List.".format(userinput))
 
 print("-------------------------------------")
-
 
 # لتكرار قيمة معينة نستخدم العامل *
 # Repeat Item in List
@@ -55,7 +49,7 @@ print("-------------------------------------")
 
 List1 = ["Python", "Java"]
 List2 = ["C++", "C#"]
-List3 = List1 + List2 # merge List and List2
+List3 = List1 + List2
 
 print(List3)
 
@@ -69,5 +63,3 @@ merge = integ + decim
 
 print(merge)
 
-print("-------------------------------------")
-print ("End Lesson")
