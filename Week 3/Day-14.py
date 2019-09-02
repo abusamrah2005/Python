@@ -31,7 +31,7 @@ print("-------------------------------------")
 
 Devices = ["Apple", "Samsung", "Huawei", "Nokia"]
 
-userinput = input("Enter Device name : ")
+userinput = input("Please Enter Device name : ")
 
 if userinput in Devices:
     print("Yes, The Device {} is In Devices List. ".format(userinput))
@@ -55,7 +55,7 @@ print("-------------------------------------")
 
 List1 = ["Python", "Java"]
 List2 = ["C++", "C#"]
-List3 = List1 + List2
+List3 = List1 + List2 # merge List and List2
 
 print(List3)
 
@@ -69,3 +69,5 @@ merge = integ + decim
 
 print(merge)
 
+print("-------------------------------------")
+print ("End Lesson")
