@@ -1,4 +1,4 @@
-
+# coding=utf-8
 # Week 3 Day-15
 # Data Structures - هياكل البيانات
 # دوال القوائم في لغة البايثون
@@ -10,8 +10,7 @@
 To determine how many items a list has, use the len() method.
 """
 
-
-cars =  ["Toyota", "Benz", "Ford", "Nissan"]
+cars = ["Toyota", "Benz", "Ford", "Nissan"]
 
 print(cars)
 
@@ -36,8 +35,9 @@ print("----------------------------------")
 
 cars2 = ["Toyota", "Benz", "Ford", "Nissan"]
 
-print(" Add a new item to the list by specifying the index number in the list --  إضافة عنصر للقائمه بتحديد موقعه في القائمه ")
-cars2.insert(1,"KIA")
+print("Add a new item to the list by specifying the index number in the list --  إضافة عنصر للقائمه بتحديد موقعه في "
+      "القائمه ")
+cars2.insert(1, "KIA")
 print(cars2)
 print("تم إضافة عنصر في مكاتن محدد اخترناه")
 
@@ -55,8 +55,6 @@ print("remove() الحذف بواسطة")
 cars3.remove("Toyota")
 print(cars3)
 print("تم حذف عنصر")
-
-
 
 # دالة الحذف الثانية هي pop() تقوم بحذف عنصر محدد في القائمة
 # تقوم بحذف العنصر لكن عن طريق استدعاء رقم ال index لهذا العنصر
@@ -78,7 +76,7 @@ print("----------------------------------")
 # The clear() method empties the list.
 cars5 = ["Toyota", "Benz", "Ford", "Nissan"]
 cars5.clear()
-print("list now : ",cars5)
+print("list now : ", cars5)
 print("تم حذف كل محتوايات القائمه")
 
 print("----------------------------------")
@@ -87,16 +85,16 @@ print("----------------------------------")
 # Copy a List
 
 
-cars6 = list (("Toyota", "Benz", "Ford", "Nissan","Benz"))
+cars6 = list(("Toyota", "Benz", "Ford", "Nissan", "Benz"))
 print(cars6)
 print("تم نسخ العناصر الى قائمه جديده وتم طباعة هذه القائمه ")
 
 print("----------------------------------")
 
-cars7 = ["Toyota", "Benz", "Ford", "Nissan","Benz"]
+cars7 = ["Toyota", "Benz", "Ford", "Nissan", "Benz"]
 
 print(cars7)
 print("count() لمعرفة عدد العناصر في القائمه مع إعطائه قيمة العنصر لمعرفة العدد")
-print ("cars6.count('Benz') مثال")
+print("cars6.count('Benz') مثال")
 cars6.count("Benz")
-print ("Count for Benz : ", cars7.count("Benz"))
+print("Count for Benz : ", cars7.count("Benz"))
