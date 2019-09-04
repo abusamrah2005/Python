@@ -2,26 +2,20 @@
 # Python Week 3  Day-16
 # الصفوف )الأزواج المرتبة( في لغة البايثون
 # Python Tuples
-
 mytuple = ("Python", "Java", "C++", "C#")
 print(mytuple)
-
 print("--------------------------------\n")
 
 # في المثال التالي قمنا بتعريف tuple فارغ ، لا يحتوي على أي عنصر.
 # An empty tuple in Python.
-
 EmptyTuple = ()
-
 print(EmptyTuple)
-
 print("--------------------------------\n")
 
 # في المثال التالي قمنا بتعريف tuple يحتوي على عنصر واحد فقط.
 #
 tupleitem = ("Python",)
 print(tupleitem)
-
 print("--------------------------------\n")
 
 # في المثال التالي قمنا بتعريف tuple يحتوي على أعداد صحيحة وعشرية
