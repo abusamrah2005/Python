@@ -98,3 +98,4 @@ print("count() لمعرفة عدد العناصر في القائمه مع إع�
 print("cars6.count('Benz') مثال")
 cars6.count("Benz")
 print("Count for Benz : ", cars7.count("Benz"))
+
