@@ -8,8 +8,8 @@ Check if Item Exists To determine if a specified item is present in
 print("Cars Brands","= ""Kia", "Nissan", "Toyota", "Bmw")
 ch = input("Please Inter Car Brand : ")
 Cars_Brands = ("Kia", "Nissan", "Toyota", "Bmw")
-if "Kia" in ch:
-    print("yes, {} in Cars Brands".format(ch))
+if ch in Cars_Brands:
+    print("Yes, {} in Cars Brands".format(ch))
 else:
     print("No, {} Not In Cars Brands".format(ch))
 print("\n-----------------------------------------\n")
