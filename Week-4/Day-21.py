@@ -38,6 +38,3 @@ del thisset
 print("\n----------------set()------------------\n")
 thisset5 = set(("apple", "banana", "cherry")) 
 print(thisset5)
-
-
-
