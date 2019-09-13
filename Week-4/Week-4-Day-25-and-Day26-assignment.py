@@ -8,6 +8,9 @@ print("Add [4,8,12] To My Set : ", set1)
 # remove an item in my set.
 set1.remove(8)
 print("Delete number 8 From My Set : ", set1)
+# clear items in my set.
+set1.clear()
+print(set1)
 
 print("------")
 
