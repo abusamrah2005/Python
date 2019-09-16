@@ -20,9 +20,9 @@ b = 50
 if a> b:
     print("{} is greater than {}".format(a, b))
 elif a == b:
-<<<<<<< HEAD
+
     print("{} And {} Are equal ".format(a, b))
-=======
+
     print("{} And {} Are equal ".format(a, b))
 
 print("\n-_-_-_-_-_-_-_-_\n")
@@ -36,9 +36,10 @@ else:
     print("{} is greater than {} ".format(k, p))
 
 print("\n-_-_-_-_-_-_-_-_\n")
+print("default user name is ( admin )")
 name = "admin"
 while True:
-    user = input("Enter your name : ")
+    user = input("Enter user name : ")
     if name == user:
         print("Hi admin, you are in control panel")
         break
