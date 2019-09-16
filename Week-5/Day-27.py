@@ -36,6 +36,13 @@ else:
     print("{} is greater than {} ".format(k, p))
 
 print("\n-_-_-_-_-_-_-_-_\n")
+w = 2200
+q = 1000
+# One line if statement
+if w > q:print("{} is greater than {}".format(w, q))
+
+
+print("\n-_-_-_-_-_-_-_-_\n")
 print("default user name is ( admin )")
 name = "admin"
 while True:
