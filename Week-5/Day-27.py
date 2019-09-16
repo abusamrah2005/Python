@@ -1,5 +1,4 @@
 # Python Week-5 Day-27
-<<<<<<< HEAD
 
 
 """Conditional Statements
@@ -8,19 +7,14 @@ Python If … Else"""
 x = 30
 y = 20
 
-=======
 # Conditional Statements . Python If … Else
 x = 30
 y = 20
->>>>>>> ec652aad4673dd75b2656ff4f57b095b5c3a2cd6
 if x > y:
     print("{} is greater than {}".format(x, y))
 
 print("\n-_-_-_-_-_-_-_-_\n")
-<<<<<<< HEAD
 
-=======
->>>>>>> ec652aad4673dd75b2656ff4f57b095b5c3a2cd6
 a = 50
 b = 50
 if a> b:
@@ -51,4 +45,4 @@ while True:
     else:
         print ("you are not authorized to view this page. Try Agine : ")
         
->>>>>>> ec652aad4673dd75b2656ff4f57b095b5c3a2cd6
+
