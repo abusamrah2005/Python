@@ -10,7 +10,7 @@ print("--- Using the start parameter ---")
 for w in range(3,9):
     print(w)
 
-print("--- Increment the sequence with 6 (default is 1) ---")
+print("--- Increment the sequence with 4 (default is 1) ---")
 
 for q in range(6, 20, 4):
     print(q)
