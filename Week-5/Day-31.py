@@ -18,7 +18,7 @@ print("----")
 
 
 def country(name, age, country1):
-    print('I am from', name)
+    print('My Name Is: ', name)
     print('I am ', age, 'old')
     print("I am From ", country1)
 
@@ -32,8 +32,8 @@ while True:
     country(name, age, country1)
   
     if age <= 25:
-        print(name, "you're a young man")
+        print(name, "you're a young ")
     elif age > 25 and age < 41:
         print(name, " You Are middle age")
     else:
-        print(name, "You are old")
+        print(" Hi", name, "You are old")
