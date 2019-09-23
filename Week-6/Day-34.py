@@ -10,7 +10,6 @@ My_Cart = ["apple", "banana", "cherry"]
 
 my_func(My_Cart)
 
-
 print("---- To let a function, return a value, use the return statement ----")
 
 def ret_value(b):
