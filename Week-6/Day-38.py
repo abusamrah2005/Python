@@ -1,8 +1,6 @@
 # Paython Week-6 Day-38
 # Python Arrays 2
-
 print(" Looping Array Elementsv ")
-
 cars = ["Ford", "Volvo", "BMW"]
 
 for x in cars:
@@ -26,7 +24,5 @@ print(cars2)
 
 print(" \n Delete the element that has the value 'BMW' ")
 cars3 = ["Ford", "Volvo", "BMW"]
-
 cars3.remove("BMW")
-
 print(cars3)
