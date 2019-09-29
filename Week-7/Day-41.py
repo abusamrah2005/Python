@@ -1,7 +1,7 @@
 # Python Week-7 Day-41 
 # Python Classes and Objects
 # To create a class, use the keyword class
-print("\n------\n")
+print("\n------ \n")
 class myfirstclass:
     x = 10
 print (myfirstclass)
