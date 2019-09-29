@@ -3,7 +3,7 @@
 
 print("\n---- Python Lambda ----\n")
 x = lambda a : a + 10
-print(x(5))
+print("one number: ", x(5))
 
 print("\n---- Lambda functions take any number of arguments. ----\n")
 
