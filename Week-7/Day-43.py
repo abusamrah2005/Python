@@ -13,7 +13,6 @@ class Student(Person): # ----> Sub Class
   def __init__(self, fname, lname):
     Person.__init__(self, fname, lname) 
 
-
 x = Person ("\nPerson Class:  "+" Mohammed","Al Asmri" + " Called From Super Class( Person)")
 x.printname()
 y = Student("\nStudent Class: "+" Mohammed","Al Asmri" + " Called From Sub Class( Student)")
