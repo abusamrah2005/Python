@@ -3,25 +3,17 @@
 
 mytuple = ( "cherry", "apple", "banana")
 myiter = iter(mytuple)
+print(next(myiter), next(myiter), next(myiter))
 
-print(next(myiter))
-print(next(myiter))
-print(next(myiter))
 
 print(" --- ")
 # Strings are also iterable objects, containing a sequence of characters.
 mystr = "TOYOTA"
 my_iter = iter(mystr)
-print(next(my_iter))
-print(next(my_iter))
-print(next(my_iter))
-print(next(my_iter))
-print(next(my_iter))
-print(next(my_iter))
+print(next(my_iter), next(my_iter), next(my_iter), next(my_iter), next(my_iter), next(my_iter))
 
 print(" --- ")
 # Iterate the values of a tuple.
-
 mytu = ("BMW", "KIA", "NISSAN")
 for x in mytu:
   print(x)
