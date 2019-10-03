@@ -40,6 +40,5 @@ class MyNumbers:
 
 myclass = MyNumbers()
 myiter = iter(myclass)
-
 print(next(myiter), next(myiter), next(myiter), next(myiter), next(myiter))
 
