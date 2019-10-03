@@ -1,3 +1,7 @@
+# Python Week-7 Day-44
+# Python Inheritance 2
+
+
 class car:
     def __init__(self, carbrand, carcolor):
         self.brand = carbrand
