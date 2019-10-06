@@ -30,16 +30,4 @@ print(y, " => OutSide function")
 print("\n-----")
 print(yy) # print variable inside function
 
-# print("\n-----")
-
-# print(" variable = 50")
-# num = 50 # global variable
-# userinput = int(input(" Enter Number: "))
-
-# def Check():
-#     if userinput == num:
-#         print(" It's equal to the variable")
-#     else:
-#         print(" It's not equal to the variable")
-# Check()
 
