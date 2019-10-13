@@ -4,7 +4,6 @@
 import json
 
 print("\n---------")
-
 x =  '{ "name":"Mohammed", "age":38, "city":"Abha"}'
 
 y = json.loads(x)
