@@ -13,3 +13,18 @@ print("------")
 str = "data is the new oil"
 x = re.findall("data", str)
 print("Search Result:", x)
+
+print("------")
+print("------")
+
+python = {
+  "language name": "Python",
+  "Definition": "Python is an interpreted, high-level, general-purpose programming language",
+  "Created by": "Guido van Rossum",
+  "Date created": "first released in 1991",
+
+}
+
+
+print(json.dumps(python, indent=4))
+
