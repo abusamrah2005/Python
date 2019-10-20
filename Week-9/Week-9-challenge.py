@@ -1,6 +1,6 @@
+# Python Week-9 Day-60-61 ( Challenge )
 import json
 import re
-
 
 week_days = ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", )
 
@@ -22,9 +22,7 @@ python = {
   "Definition": "Python is an interpreted, high-level, general-purpose programming language",
   "Created by": "Guido van Rossum",
   "Date created": "first released in 1991",
-
 }
-
 
 print(json.dumps(python, indent=4))
 
