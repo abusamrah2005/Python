@@ -1,7 +1,6 @@
 # Python Week-10 Day-64
 # Python Try-Except
 
-
 try:
     print(x)
 except  NameError as err:
@@ -16,9 +15,9 @@ else:
 
 print("----")
 try:
-    print(x)
+    print(y)
 except  NameError as err:
-    print ("name 'x' is not defined")
+    print ("name 'y' is not defined")
 finally:
     print(" The Try Except Is Finished")
 
