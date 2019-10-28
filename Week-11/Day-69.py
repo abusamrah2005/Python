@@ -8,14 +8,17 @@ x = open("Week-11/myfile.txt", "r")
 print(x.read())
 x.close()
 print("----")
+
 # read parts of the file
 f = open("Week-11/myfile.txt", "r")
 print(f.read(6))
 print("----")
+
 # read line
 f = open("Week-11/myfile.txt", "r")
 print(f.readline())
 print("----")
+
 # read 2 lines
 f = open("Week-11/myfile.txt", "r")
 print(f.readline())
@@ -26,8 +29,8 @@ f = open("Week-11/myfile.txt", "r")
 for x in f:
   print(x)
 f.close()
-print("\n-- Write to File --\n")
 
+print("\n-- Write to File --\n")
 y = open("Week-11/WriteToFile.txt", "a")
 y.write("Hello World ")
 y = open("Week-11/WriteToFile.txt", "r")
