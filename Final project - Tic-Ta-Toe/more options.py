@@ -1,0 +1,571 @@
+# Python - Project Tic-Ta-Toe
+from tkinter import *
+from tkinter.messagebox import showinfo
+from tkinter import messagebox
+from PIL import ImageTk, Image
+
+# الاعدادات الرئيسية للفورم
+saudidevorg = Tk()  # اسم الفورم
+saudidevorg.iconbitmap('33.ico')  # ايقونة الفورم
+
+width_of_window = 820  # عرض الفورم
+height_of_window = 630  # طول الفورم
+# توسيط الفورم في الشاشة
+screen_width = saudidevorg.winfo_screenwidth()
+screen_height = saudidevorg.winfo_screenheight()
+x_coordinate = (screen_width/2) - (width_of_window/2)
+y_coordinate = (screen_height/2) - (height_of_window/2)
+saudidevorg.geometry("%dx%d+%d+%d" % (width_of_window,
+                                      height_of_window, x_coordinate, y_coordinate))
+saudidevorg.title(" المبادرة السعودية للمطورين ")  # تسمية الفورم
+saudidevorg.configure(bg='#70a1ff')  # لون خلفية الفورم
+myFont = 'arial', 20, 'bold'  # متغير لحفظ اعدادات الخط
+myFont1 = 'arial', 16, 'bold'  # متغير لحفظ اعدادات الخط
+bgcolor = '#70a1ff'  # متغير للون
+
+
+
+fr1 = Frame(saudidevorg, bg=bgcolor, bd=3)
+fr1.grid(row=0, column=0)
+
+f1 = Frame(saudidevorg, bg=bgcolor, width=820, height=630)# الفريم الاول لواجهة اللعبه الذي يمكن اللاعب من اختيار طريقة اللعب
+f2 = Frame(saudidevorg, bg=bgcolor, bd=3,width=820, height=230)# الفريم الثاني اللعب مع لاعب اخر 
+f3 = Frame(saudidevorg, bg=bgcolor, bd=3,width=820, height=230)# الفريم الثالث اللعب مع الكمبيوتر
+f1.grid(row=1, column=0)
+f2.grid(row=1, column=0)
+f3.grid(row=1, column=0)
+
+
+TopFrame = Frame(saudidevorg, bg="#70a1ff", pady=2,
+                 width=400, height=100, relief=RIDGE)
+TopFrame.grid(row=0, column=0)
+lbtitle = Label(TopFrame, text=" Tic-Ta-Toe Project With saudidevorg ",
+                font=myFont, bd=21, bg="#70a1ff")
+lbtitle.grid(row=2, column=0)
+FormFrame = Frame(saudidevorg, pady=2, padx=5, width=600, bg="#70a1ff",
+                  height=500, relief=SOLID, bd=2)
+FormFrame.grid(row=1, column=0, padx=5)
+
+leftframe = Frame(FormFrame, bg="#70a1ff", bd=5,  pady=2,
+                  padx=10, width=500, height=500, relief=RIDGE)
+leftframe.pack(side=LEFT)
+
+rightframe = Frame(FormFrame, bd=5, bg="#70a1ff", pady=2,
+                   width=500, height=200, relief=RIDGE)
+rightframe.pack(side=RIGHT)
+
+toprightframe = Frame(rightframe, bd=5, bg="#70a1ff", pady=2,
+                      padx=10, width=600, height=200, relief=SOLID)
+toprightframe.grid(row=0, column=0)
+
+botrightframe = Frame(rightframe, bd=5, bg="#70a1ff", pady=2,
+                      padx=10, width=400, height=200, relief=SOLID)
+botrightframe.grid(row=3, column=0, pady=5)
+
+
+def gantihal(frame):
+    frame.tkraise()
+
+for frame in (f1, f2, f3,fr1, FormFrame):
+    frame.grid(row=0, column=0, sticky='news')
+
+
+button_1 = Button(f1, text="Start Play VS Human", bd=1,
+                  relief=RIDGE, pady=2, padx=2, fon=myFont, command=lambda:gantihal(f2))
+button_1.grid(row=1, column=0, pady=50, padx=50)
+
+button_2 = Button(f1, text="Start Play VS Computer", bd=1,
+                  relief=RIDGE, pady=2, padx=2, fon=myFont, command=lambda:gantihal(f3))
+button_2.grid(row=1, column=1)
+
+def raise_frame(frame):
+    frame.tkraise()
+
+
+path = "222.jpg"
+img = ImageTk.PhotoImage(Image.open(path))
+panel = Label(f1, image=img, width=300, height=300)
+panel.grid(row=3, column=1, pady=3)
+
+path = "111.png"
+img1 = ImageTk.PhotoImage(Image.open(path))
+panel1 = Label(f1, image=img1, width=300)
+panel1.grid(row=3, column=0, pady=3)
+
+
+def Playersname():
+    if entry_1.get() == "" or entry_2.get() == "":
+        showinfo("Player Names",
+                 "Please Insert Players Names")
+
+    else:
+        name_of_user = entry_1.get()
+        string_to_display = name_of_user + " : "
+        var_1.set(string_to_display)
+        name_of_user = entry_2.get()
+        string_to_display = name_of_user + " : "
+        var_2.set(string_to_display)
+        frame.tkraise()
+
+def Playersname1():
+    if entry_3.get() == "" :
+        showinfo("Player Names",
+                 "Please Insert Players Names")
+
+    else:
+        name_of_user = entry_3.get()
+        string_to_display = name_of_user + " : "
+        var_3.set(string_to_display)
+
+        frame.tkraise()
+
+# متغيرات لحفظ اسماء اللاعبين من مربعات النص
+var_1 = StringVar()
+var_2 = StringVar()
+var_3 = StringVar()
+
+label_1 = Label(f2, text="Enter PlayerX Name", bd=1,
+                relief=RIDGE, pady=2, padx=2, fon=myFont)
+
+label_3 = Label(f3, text="Enter PlayerX Name", bd=1,
+                relief=RIDGE, pady=2, padx=2, fon=myFont)
+entry_3 = Entry(f3, bd=1, relief=RIDGE, width=20, fon=myFont)
+
+label_2 = Label(f2, text="Enter PlayerO Name", bd=1,
+                relief=RIDGE, pady=2, padx=2, fon=myFont)
+entry_1 = Entry(f3, bd=1, relief=RIDGE, width=20, fon=myFont)
+
+entry_1 = Entry(f2, bd=1, relief=RIDGE, width=20, fon=myFont)
+entry_2 = Entry(f2, bd=1, relief=RIDGE, width=20, fon=myFont)
+button_1 = Button(f2, text="Start Play VS Human", bd=2,
+                  relief=RIDGE, pady=2, padx=2, fon=myFont, command=Playersname)
+button_3 = Button(f3, text=" VS Computer", bd=2,
+                  relief=RIDGE, pady=2, padx=2, fon=myFont)
+
+entry_1.focus()
+entry_3.focus()  # (entry_1) لوضع المؤشر داخل مربع النص
+
+label_1.grid(row=1, column=0, pady=5, padx=5)
+label_2.grid(row=2, column=0, pady=5, padx=5)
+entry_1.grid(row=1, column=1, pady=5)
+entry_2.grid(row=2, column=1, pady=5)
+button_1.grid(row=3, column=1, pady=5)
+
+entry_3.grid(row=1, column=1, pady=5)
+button_3.grid(row=2, column=1, pady=5)
+label_3.grid(row=1, column=0, pady=5, padx=5)
+
+
+# زر الخروج من اللعبه
+bclose = Button(saudidevorg, text="Exit", font=myFont1,
+                command=saudidevorg.destroy)
+bclose.grid(row=4, column=0, pady=5)
+
+# زر الرجوع للخلف
+bback = Button(saudidevorg, text="Go Back", bd=1,
+                  relief=RIDGE, fon=myFont1, command=lambda:gantihal(f1))
+bback.grid(row=3, column=0)
+
+# متغيرات
+PlayerX = IntVar()
+PlayerO = IntVar()
+
+PlayerX.set(0)
+PlayerO.set(0)
+
+buttons = StringVar()
+click = True
+
+
+def Buttonsdisabled():  # دالة تعطيل الازرار عند فوز احد الطرفين
+    b1["state"] = "disabled"
+    b2["state"] = "disabled"
+    b3["state"] = "disabled"
+    b4["state"] = "disabled"
+    b5["state"] = "disabled"
+    b6["state"] = "disabled"
+    b7["state"] = "disabled"
+    b8["state"] = "disabled"
+    b9["state"] = "disabled"
+
+
+def Buttonsnormal():  # Reset او New Game دالة تفعيل الازرار بعد الضغط على
+    b1["state"] = "normal"
+    b2["state"] = "normal"
+    b3["state"] = "normal"
+    b4["state"] = "normal"
+    b5["state"] = "normal"
+    b6["state"] = "normal"
+    b7["state"] = "normal"
+    b8["state"] = "normal"
+    b9["state"] = "normal"
+
+
+def checker(buttons):  # دالة التحقق من اللاعب الذي ضغط على الزر وتسمية الزر
+    global click
+    if buttons['text'] == '' and click == True:
+        buttons["text"] = "X"
+        click = False
+        result()
+    elif buttons['text'] == '' and click == False:
+        buttons["text"] = "O"
+        click = True
+        result()
+
+
+
+
+def reset():  # مسح نص جميع الازرار وإعادة تفعيلها
+    b1['text'] = ""
+    b2['text'] = ""
+    b3['text'] = ""
+    b4['text'] = ""
+    b5['text'] = ""
+    b6['text'] = ""
+    b7['text'] = ""
+    b8['text'] = ""
+    b9['text'] = ""
+
+    b1.configure(background="#ced6e0")
+    b2.configure(background="#ced6e0")
+    b3.configure(background="#ced6e0")
+    b4.configure(background="#ced6e0")
+    b5.configure(background="#ced6e0")
+    b6.configure(background="#ced6e0")
+    b7.configure(background="#ced6e0")
+    b8.configure(background="#ced6e0")
+    b9.configure(background="#ced6e0")
+
+    Buttonsnormal()
+
+def NewGame():  # تصفير نتيجة اللاعبين وبدء لعبة جديد وتفعيل الازرار
+    PlayerX.set(0)
+    PlayerO.set(0)
+    b1['text'] = ""
+    b2['text'] = ""
+    b3['text'] = ""
+    b4['text'] = ""
+    b5['text'] = ""
+    b6['text'] = ""
+    b7['text'] = ""
+    b8['text'] = ""
+    b9['text'] = ""
+    b1.configure(background="#ced6e0")
+    b2.configure(background="#ced6e0")
+    b3.configure(background="#ced6e0")
+    b4.configure(background="#ced6e0")
+    b5.configure(background="#ced6e0")
+    b6.configure(background="#ced6e0")
+    b7.configure(background="#ced6e0")
+    b8.configure(background="#ced6e0")
+    b9.configure(background="#ced6e0")
+
+    Buttonsnormal()
+
+
+######
+#  X او  O عند تطابق نص الازرار 
+# Reset او New Game ستظهر رسالة بفوز اللاعب ويتم تعطيل الازرار حتى يتم الضغط على
+# تحقق من إشارة 3 ازرار متتاليه
+######
+def result():
+    if (b1["text"] == "X" and b2["text"] == "X" and b3["text"] == "X"):
+        b1.configure(background="#eccc68")  # تغيير لون الزر عند تطابق الرمز
+        b2.configure(background="#eccc68")  # تغيير لون الزر عند تطابق الرمز
+        b3.configure(background="#eccc68")  # تغيير لون الزر عند تطابق الرمز
+        result = int(PlayerX.get())
+        score = (result + 1)
+        PlayerX.set(score)
+        showinfo(entry_1.get() + " Win",
+                 "you won a round , \n Press Reset To Try Agine\n Or Exit")
+        Buttonsdisabled()
+
+    elif (b4["text"] == "X" and b5["text"] == "X" and b6["text"] == "X"):
+        b4.configure(background="#eccc68")
+        b5.configure(background="#eccc68")
+        b6.configure(background="#eccc68")
+        result = int(PlayerX.get())
+        score = (result + 1)
+        PlayerX.set(score)
+        showinfo("Winner Player X",
+                 "You Won A gmae ,  Player O Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b7["text"] == "X" and b8["text"] == "X" and b9["text"] == "X"):
+        b7.configure(background="#eccc68")
+        b8.configure(background="#eccc68")
+        b9.configure(background="#eccc68")
+        result = int(PlayerX.get())
+        score = (result + 1)
+        PlayerX.set(score)
+        showinfo("Winner Player X",
+                 "You Won A gmae ,  Player O Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b1["text"] == "O" and b2["text"] == "O" and b3["text"] == "O"):
+        b1.configure(background="#eccc68")
+        b2.configure(background="#eccc68")
+        b3.configure(background="#eccc68")
+        result = int(PlayerO.get())
+        score = (result + 1)
+        PlayerO.set(score)
+        showinfo("Winner Player O",
+                 "You Won A gmae ,  Player X Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b4["text"] == "O" and b5["text"] == "O" and b6["text"] == "O"):
+        b4.configure(background="#eccc68")
+        b5.configure(background="#eccc68")
+        b6.configure(background="#eccc68")
+        result = int(PlayerO.get())
+        score = (result + 1)
+        PlayerO.set(score)
+        showinfo("Winner Player O",
+                 "You Won A gmae ,  Player X Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b7["text"] == "O" and b8["text"] == "O" and b9["text"] == "O"):
+        b7.configure(background="#eccc68")
+        b8.configure(background="#eccc68")
+        b9.configure(background="#eccc68")
+        result = int(PlayerO.get())
+        score = (result + 1)
+        PlayerO.set(score)
+        showinfo("Winner Player O",
+                 "You Won A gmae ,  Player X Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b3["text"] == "X" and b5["text"] == "X" and b7["text"] == "X"):
+        b3.configure(background="#eccc68")
+        b5.configure(background="#eccc68")
+        b7.configure(background="#eccc68")
+        result = int(PlayerX.get())
+        score = (result + 1)
+        PlayerX.set(score)
+        showinfo("Winner Player X",
+                 "You Won A gmae ,  Player O Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b1["text"] == "X" and b5["text"] == "X" and b9["text"] == "X"):
+        b1.configure(background="#eccc68")
+        b5.configure(background="#eccc68")
+        b9.configure(background="#eccc68")
+        result = int(PlayerX.get())
+        score = (result + 1)
+        PlayerX.set(score)
+        showinfo("Winner Player X",
+                 "You Won A gmae ,  Player O Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b4["text"] == "O" and b5["text"] == "O" and b6["text"] == "O"):
+        b4.configure(background="#eccc68")
+        b5.configure(background="#eccc68")
+        b6.configure(background="#eccc68")
+        result = int(PlayerO.get())
+        score = (result + 1)
+        PlayerO.set(score)
+        showinfo("Winner Player O",
+                 "You Won A gmae ,  Player X Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b7["text"] == "O" and b8["text"] == "O" and b9["text"] == "O"):
+        b7.configure(background="#eccc68")
+        b8.configure(background="#eccc68")
+        b9.configure(background="#eccc68")
+        result = int(PlayerO.get())
+        score = (result + 1)
+        PlayerO.set(score)
+        showinfo("Winner Player O",
+                 "You Won A gmae ,  Player X Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b3["text"] == "O" and b5["text"] == "O" and b7["text"] == "O"):
+        b3.configure(background="#eccc68")
+        b5.configure(background="#eccc68")
+        b7.configure(background="#eccc68")
+        result = int(PlayerO.get())
+        score = (result + 1)
+        PlayerO.set(score)
+        showinfo("Winner Player O",
+                 "You Won A gmae ,  Player X Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b1["text"] == "O" and b5["text"] == "O" and b9["text"] == "O"):
+        b1.configure(background="#eccc68")
+        b5.configure(background="#eccc68")
+        b9.configure(background="#eccc68")
+        result = int(PlayerO.get())
+        score = (result + 1)
+        PlayerO.set(score)
+        showinfo("Winner Player O",
+                 "You Won A gmae ,  Player X Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b1["text"] == "O" and b5["text"] == "O" and b7["text"] == "O"):
+        b1.configure(background="#eccc68")
+        b4.configure(background="#eccc68")
+        b7.configure(background="#eccc68")
+        result = int(PlayerO.get())
+        score = (result + 1)
+        PlayerO.set(score)
+        showinfo("Winner Player O",
+                 "You Won A gmae ,  Player X Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b2["text"] == "O" and b5["text"] == "O" and b8["text"] == "O"):
+        b2.configure(background="#eccc68")
+        b5.configure(background="#eccc68")
+        b8.configure(background="#eccc68")
+        result = int(PlayerO.get())
+        score = (result + 1)
+        PlayerO.set(score)
+        showinfo("Winner Player O",
+                 "You Won A gmae ,  Player X Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b1["text"] == "O" and b5["text"] == "O" and b9["text"] == "O"):
+        b3.configure(background="#eccc68")
+        b6.configure(background="#eccc68")
+        b9.configure(background="#eccc68")
+        result = int(PlayerO.get())
+        score = (result + 1)
+        PlayerO.set(score)
+        showinfo("Winner Player O",
+                 "You Won A gmae ,  Player x Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b1["text"] == "ْX" and b4["text"] == "X" and b7["text"] == "X"):
+        b1.configure(background="#eccc68")
+        b4.configure(background="#eccc68")
+        b7.configure(background="#eccc68")
+        result = int(PlayerX.get())
+        score = (result + 1)
+        PlayerX.set(score)
+        showinfo("Winner Player X",
+                 "You Won A gmae ,  Player O Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b2["text"] == "X" and b5["text"] == "X" and b8["text"] == "X"):
+        b2.configure(background="#eccc68")
+        b5.configure(background="#eccc68")
+        b8.configure(background="#eccc68")
+        result = int(PlayerX.get())
+        score = (result + 1)
+        PlayerX.set(score)
+        showinfo("Winner Player X",
+                 "You Won A gmae ,  Player O Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b3["text"] == "X" and b6["text"] == "X" and b9["text"] == "X"):
+        b3.configure(background="#eccc68")
+        b6.configure(background="#eccc68")
+        b9.configure(background="#eccc68")
+        result = int(PlayerX.get())
+        score = (result + 1)
+        PlayerX.set(score)
+        showinfo("Winner Player X",
+                 "You Won A gmae ,  Player O Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b3["text"] == "O" and b6["text"] == "O" and b9["text"] == "O"):
+        b3.configure(background="#eccc68")
+        b6.configure(background="#eccc68")
+        b9.configure(background="#eccc68")
+        result = int(PlayerO.get())
+        score = (result + 1)
+        PlayerO.set(score)
+        showinfo("Winner Player O",
+                 "You Won A gmae ,  Player X Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b1["text"] == "O" and b4["text"] == "O" and b7["text"] == "O"):
+        b1.configure(background="#eccc68")
+        b4.configure(background="#eccc68")
+        b7.configure(background="#eccc68")
+        result = int(PlayerO.get())
+        score = (result + 1)
+        PlayerO.set(score)
+        showinfo("Winner Player O",
+                 "You Won A gmae ,  Player X Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+    elif (b1["text"] == "X" and b4["text"] == "X" and b7["text"] == "X"):
+        b1.configure(background="#eccc68")
+        b4.configure(background="#eccc68")
+        b7.configure(background="#eccc68")
+        result = int(PlayerX.get())
+        score = (result + 1)
+        PlayerX.set(score)
+        showinfo("Winner Player X",
+                 "You Won A gmae ,  Player O Lose\n Press Reset To Try Agine Or Exit")
+        Buttonsdisabled()
+
+
+
+
+# هنا يظهر اسم اللاعب الاول وعدد مرات الغوز
+lablplayerX = Label(toprightframe, textvariable=var_1,
+                    font=myFont1, pady=2, padx=2, bg="#70a1ff")
+lablplayerX.grid(row=0, column=0, sticky=W)
+
+txtplayerX = Entry(toprightframe, font=myFont1, bg='#f1f2f6',
+                   fg="black", bd=2, textvariable=PlayerX, width=15, justify=LEFT).grid(row=0, column=1)
+# هنا يظهر اسم اللاعب الثاني وعدد مرات الغوز
+lablplayerO = Label(toprightframe, textvariable=var_2,
+                    font=myFont1, pady=2, padx=2, bg="#70a1ff").grid(row=1, column=0, sticky=W)
+txtplayerO = Entry(toprightframe, font=myFont1, bg='#f1f2f6',
+                   fg="black", bd=2, textvariable=PlayerO, width=15, justify=LEFT).grid(row=1, column=1)
+
+# زر مسح اسماء الازرار
+reset = Button(botrightframe,  text="Reset", font=myFont,
+               width=20,  height=1, bg='#1e90ff', command=reset)
+reset.grid(row=1, column=0, padx=6, pady=10)
+
+# زر اعادة اللعب من جديد وتصفير عدد مرات الفوز ومسح الازرار
+new_game = Button(botrightframe,  text="New Game", font=myFont,
+                  width=20,  height=1, bg='#1e90ff', command=NewGame)
+new_game.grid(row=2, column=0, padx=6, pady=10)
+
+# اعداد الخاصة ب 9 ازرار التي يضغط عليها اللاعبون
+b1 = Button(leftframe,  text="",  width=15,  height=8, bg='#ced6e0',
+            command=lambda: checker(b1))
+b1.grid(row=1, column=0, sticky=S+N+E+W)
+
+b2 = Button(leftframe,  text="",  width=15,  height=8, bg='#ced6e0',
+            command=lambda: checker(b2))
+b2.grid(row=1, column=1, sticky=S+N+E+W)
+
+b3 = Button(leftframe,  text="",  width=15,  height=8, bg='#ced6e0',
+            command=lambda: checker(b3))
+b3.grid(row=1, column=2, sticky=S+N+E+W)
+
+b4 = Button(leftframe,  text="",  width=15,  height=8, bg='#ced6e0',
+            command=lambda: checker(b4))
+b4.grid(row=2, column=0, sticky=S+N+E+W)
+
+b5 = Button(leftframe,  text="",  width=15,  height=8, bg='#ced6e0',
+            command=lambda: checker(b5))
+b5.grid(row=2, column=1, sticky=S+N+E+W)
+
+b6 = Button(leftframe,  text="",  width=15,  height=8, bg='#ced6e0',
+            command=lambda: checker(b6))
+b6.grid(row=2, column=2, sticky=S+N+E+W)
+
+b7 = Button(leftframe,  text="",  width=15,  height=8, bg='#ced6e0',
+            command=lambda: checker(b7))
+b7.grid(row=3, column=0, sticky=S+N+E+W)
+
+b8 = Button(leftframe,  text="",  width=15,  height=8, bg='#ced6e0',
+            command=lambda: checker(b8))
+b8.grid(row=3, column=1, sticky=S+N+E+W)
+
+b9 = Button(leftframe,  text="",  width=15,  height=8, bg='#ced6e0',
+            command=lambda: checker(b9))
+b9.grid(row=3, column=2, sticky=S+N+E+W)
+
+
+                  
+
+gantihal(f1)
+saudidevorg.mainloop()
+

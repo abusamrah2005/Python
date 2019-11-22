@@ -1,0 +1,69 @@
+from tkinter import *
+
+
+# def raise_frame(frame):
+#     frame.tkraise()
+
+root = Tk()
+
+# f1 = Frame(root)
+# f2 = Frame(root)
+# f3 = Frame(root)
+# f4 = Frame(root)
+
+# for frame in (f1, f2, f3, f4):
+#     frame.grid(row=0, column=0, sticky='news')
+
+# Button(f1, text='Go to frame 2', command=lambda:raise_frame(f2)).pack()
+# Label(f1, text='FRAME 1').pack()
+
+# Label(f2, text='FRAME 2').pack()
+# Button(f2, text='Go to frame 3', command=lambda:raise_frame(f3)).pack()
+
+# Label(f3, text='FRAME 3').pack(side='left')
+# Button(f3, text='Go to frame 4', command=lambda:raise_frame(f4)).pack(side='left')
+
+# Label(f4, text='FRAME 4').pack()
+# Button(f4, text='Goto to frame 1', command=lambda:raise_frame(f1)).pack()
+
+# raise_frame(f1)
+# root.mainloop()
+
+# from tkinter import *
+
+# root = Tk(className = "button_click_label")
+# root.geometry("200x200")
+
+# message = StringVar()
+# message.set('hi')
+
+# l1 = Label(root, text="hi")
+
+
+# bb = Entry(root).pack()
+# def press():
+#     l1.config(text="hello")
+# def press1():
+#     l1.config(text="eeee")
+
+# b1 = Button(root, text = "clickhere", command = press).pack()
+# b2 = Button(root, text = "clickhere", command = press1).pack()
+
+# l1.pack()
+def say_hello():
+    name_of_user = entry_1.get()
+    string_to_display = name_of_user
+    var_1.set(string_to_display)
+    # label_2["text"] = string_to_display
+
+var_1 = StringVar()
+label_1 = Label(root, text="Enter name")
+entry_1 = Entry(root)
+button_1 = Button(root, text="Click Me", command=say_hello)
+label_2 = Label(root, textvariable=var_1)
+
+label_1.grid(row=0, column=0)
+entry_1.grid(row=0, column=1)
+button_1.grid(row=1, column=0)
+label_2.grid(row=1, column=1)
+root.mainloop()
